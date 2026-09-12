@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b0b0d">
+<title>Competitive Player Application — SOVEN</title>
+<meta name="description" content="Prepare your SOVEN competitive player application. Share your experience, goals, and contribution.">
+<meta property="og:title" content="Competitive Player Application — SOVEN">
+<meta property="og:description" content="Prepare your SOVEN competitive player application. Share your experience, goals, and contribution.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/favicon.png">
+<link rel="preload" href="assets/anton.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="styles.css">
+<script src="site-config.js" defer>
+</script>
+<script src="site.js" defer>
+</script>
+<noscript>
+<style>@media(max-width:700px){.header{height:auto}.header-inner{flex-wrap:wrap;padding-bottom:20px}.nav{position:static;display:flex;flex-wrap:wrap;width:100%;padding:0;border:0}.menu-toggle{display:none}}</style>
+</noscript>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="header">
+<div class="wrap header-inner">
+<a class="brand" href="index.html" aria-label="SOVEN home">
+<img src="assets/wordmark.webp" width="142" height="70" alt="SOVEN">
+</a>
+<button class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menu</button>
+<nav class="nav" id="navigation" aria-label="Main navigation">
+<a href="index.html">Home</a>
+<a href="roster.html">Roster</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a class="nav-apply" href="apply.html" aria-current="page">Apply to SOVEN <span aria-hidden="true">↗</span>
+</a>
+</nav>
+</div>
+</header>
+<main id="main">
+<section class="wrap page-intro">
+<div class="eyebrow">
+<span class="slash">/</span>Recruitment / Competitive</div>
+<h1 class="page-title">PLAYER APPLICATION.</h1>
+<p class="lead">Tell us about your game, your experience, and what you’re working toward.</p>
+</section>
+<div class="wrap application-layout">
+<aside class="application-aside">
+<a class="back-link" href="apply.html">← All application paths</a>
+<h2>Make your introduction count.</h2>
+<p>Be specific, be honest, and include links that help us understand your work.</p>
+<p>Only share information you're comfortable including in your application. Never include passwords or private account credentials.</p>
+<div class="notice" id="connection-notice">Online submission is not connected yet. You can prepare your answers and download a draft. Nothing is sent to SOVEN.</div>
+</aside>
+<div>
+<nav class="path-switch" aria-label="Application paths">
+<a href="apply-competitive.html" aria-current="page">Competitive player</a>
+<a href="apply-creator.html" >Content creator</a>
+</nav>
+<p class="required-note">* Required for online submission. Drafts may be incomplete.</p>
+<a id="google-form-link" class="button primary" hidden>Continue to application ↗</a>
+<noscript>
+<p class="notice">Enable JavaScript to download a draft or use online submission. No answers will be sent without it.</p>
+</noscript>
+<form class="application-form" data-path="competitive">
+<fieldset>
+<legend>01 / Your details</legend>
+<div class="fields">
+<div class="field ">
+<label for="display_name">Display name <span aria-hidden="true">*</span>
+</label>
+<input id="display_name" name="display_name" required  type="text" maxlength="600">
+</div>
+<div class="field ">
+<label for="age">Age <span aria-hidden="true">*</span>
+</label>
+<input id="age" name="age" required  type="number" min="1" max="120" step="1" inputmode="numeric">
+</div>
+<div class="field ">
+<label for="region">Region <span aria-hidden="true">*</span>
+</label>
+<input id="region" name="region" required aria-describedby="region-help" type="text" maxlength="600">
+<small id="region-help">Your in-game region or the region you compete in.</small>
+</div>
+<div class="field ">
+<label for="discord_username">Discord username <span aria-hidden="true">*</span>
+</label>
+<input id="discord_username" name="discord_username" required  type="text" maxlength="600">
+</div>
+<div class="field ">
+<label for="epic_username">Epic Games username <span aria-hidden="true">*</span>
+</label>
+<input id="epic_username" name="epic_username" required  type="text" maxlength="600">
+</div>
+</div>
+</fieldset>
+<fieldset>
+<legend>02 / Competitive experience</legend>
+<div class="fields">
+<div class="field ">
+<label for="current_rank">Current rank <span aria-hidden="true">*</span>
+</label>
+<input id="current_rank" name="current_rank" required  type="text" maxlength="600">
+</div>
+<div class="field ">
+<label for="tracker_url">Fortnite Tracker link <span aria-hidden="true">*</span>
+</label>
+<input id="tracker_url" name="tracker_url" required  type="url" maxlength="600">
+</div>
+<div class="field full">
+<label for="tournament_experience">Tournament experience / placements <span aria-hidden="true">*</span>
+</label>
+<textarea id="tournament_experience" name="tournament_experience" required aria-describedby="tournament_experience-help" maxlength="5000" rows="4">
+</textarea>
+<small id="tournament_experience-help">Include event names and placements. If you have no tournament experience, say so.</small>
+</div>
+<div class="field full">
+<label for="previous_teams">Previous teams <span class="unavailable">(optional)</span>
+</label>
+<input id="previous_teams" name="previous_teams"   type="text" maxlength="600">
+</div>
+<div class="field full">
+<label for="availability">Availability <span aria-hidden="true">*</span>
+</label>
+<textarea id="availability" name="availability" required aria-describedby="availability-help" maxlength="5000" rows="4">
+</textarea>
+<small id="availability-help">Include days, times, and your time zone.</small>
+</div>
+<div class="field full">
+<label for="social_links">Social links <span class="unavailable">(optional)</span>
+</label>
+<textarea id="social_links" name="social_links"   maxlength="5000" rows="4">
+</textarea>
+</div>
+</div>
+</fieldset>
+<fieldset>
+<legend>03 / You and SOVEN</legend>
+<div class="fields">
+<div class="field full">
+<label for="why_join">Why do you want to join SOVEN? <span aria-hidden="true">*</span>
+</label>
+<textarea id="why_join" name="why_join" required  maxlength="5000" rows="4">
+</textarea>
+</div>
+<div class="field full">
+<label for="looking_for">What are you looking for from SOVEN? <span aria-hidden="true">*</span>
+</label>
+<textarea id="looking_for" name="looking_for" required  maxlength="5000" rows="4">
+</textarea>
+</div>
+<div class="field full">
+<label for="contribution">What can you contribute to SOVEN? <span aria-hidden="true">*</span>
+</label>
+<textarea id="contribution" name="contribution" required  maxlength="5000" rows="4">
+</textarea>
+</div>
+</div>
+</fieldset>
+<p class="required-note" id="form-privacy">Your answers stay in this page until you download a draft. They are not saved when you leave or refresh.</p>
+<div class="form-actions">
+<button type="submit" class="button primary" id="submit-application" disabled>Submission not connected</button>
+<button type="button" class="button" id="download-draft">Download draft ↓</button>
+</div>
+<p class="form-status" id="form-status" role="status" aria-live="polite">
+</p>
+</form>
+</div>
+</div>
+</main>
+<footer class="footer">
+<div class="wrap">
+<div class="footer-top">
+<a href="index.html" aria-label="SOVEN home">
+<img src="assets/wordmark.webp" width="130" height="67" alt="SOVEN" loading="lazy">
+</a>
+<div class="footer-links">
+<a href="roster.html">Roster</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact & socials</a>
+<a href="https://www.tiktok.com/@sovenfn" data-tiktok target="_blank" rel="noopener noreferrer">TikTok ↗</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 SOVEN. All rights reserved.</span>
+<span>Competitive drive. Creative ambition.</span>
+</div>
+</div>
+</footer>
+</body>
+</html>
