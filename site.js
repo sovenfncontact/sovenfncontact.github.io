@@ -36,7 +36,7 @@ document.querySelectorAll('[data-roster]').forEach(container => {
     if (member.image) { const img = document.createElement('img'); img.src = member.image; img.alt = member.name; img.loading = 'lazy'; img.width = 400; img.height = 500; img.addEventListener('error', () => img.replaceWith(fallback()), { once: true }); card.append(img); } else card.append(fallback());
     const body = document.createElement('div'); body.className = 'profile-body';
     const name = document.createElement('h3'); name.textContent = member.name;
-    if (member.nameTag) { const tag = document.createElement('span'); tag.className = 'profile-name-tag'; tag.textContent = member.nameTag; name.append(' ', tag); }
+    if (member.nameTag) { const tag = document.createElement('span'); tag.className = 'profile-name-tag'; tag.textContent = member.nameTag; name.prepend(tag, ' '); }
     const role = document.createElement('p'); role.textContent = member.role; body.append(name, role);
     if (member.epicName) { const epic = document.createElement('p'); epic.textContent = 'Epic: ' + member.epicName; body.append(epic); }
     const socials = document.createElement('div'); socials.className = 'profile-socials';
