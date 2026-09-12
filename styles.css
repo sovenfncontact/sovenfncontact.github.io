@@ -316,6 +316,13 @@ color:#83758d}
 .profile-body{padding:24px}
 .profile h3{font-size:26px;
 margin:0}
+.profile-name-tag{display:inline-block;
+font-size:.46em;
+font-weight:600;
+letter-spacing:.12em;
+vertical-align:super;
+color:#bcb3c8;
+margin-left:.2em}
 .profile p{color:#aaa0b6}
 .profile-socials{display:flex;
 gap:15px;
@@ -548,4 +555,3 @@ transition:none!important}
 .not-found h1{font-size:clamp(36px,8vw,70px)}
 .profile>img{height:auto}
 .hero h1{line-height:1.04}
-

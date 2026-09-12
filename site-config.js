@@ -10,7 +10,12 @@ window.SOVEN_CONFIG = {
   },
   roster: {
     competitive: [],
-    creators: []
-    // Member: { name, role, image: 'assets/member.webp', epicName: '', socials: [{ label, url }] }
+    creators: [{
+      name: 'Velari',
+      nameTag: 'SVN',
+      role: 'Founder / Creator',
+      socials: [{ label: 'TikTok', url: 'https://www.tiktok.com/@velaritt' }]
+    }]
+    // Member: { name, nameTag: '', role, image: 'assets/member.webp', epicName: '', socials: [{ label, url }] }
   }
 };
