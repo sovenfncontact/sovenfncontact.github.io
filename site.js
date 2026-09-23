@@ -45,7 +45,7 @@ document.querySelectorAll('[data-roster]').forEach(container => {
   for (const member of members) {
     const card = document.createElement('article'); card.className = 'profile';
     const fallback = () => { const el = document.createElement('div'); el.className = 'profile-placeholder'; el.setAttribute('aria-hidden', 'true'); el.textContent = member.name.slice(0, 2).toUpperCase(); return el; };
-    if (member.image) { const img = document.createElement('img'); img.src = member.image; img.alt = member.name; img.loading = 'lazy'; img.width = 400; img.height = 500; img.addEventListener('error', () => img.replaceWith(fallback()), { once: true }); card.append(img); } else card.append(fallback());
+    if (member.image) { const img = document.createElement('img'); img.src = member.image; img.alt = member.name; img.loading = 'lazy'; img.width = 400; img.height = 400; img.addEventListener('error', () => img.replaceWith(fallback()), { once: true }); card.append(img); } else card.append(fallback());
     const body = document.createElement('div'); body.className = 'profile-body';
     const name = document.createElement('h3'); name.textContent = member.name;
     if (member.nameTag) { const tag = document.createElement('span'); tag.className = 'profile-name-tag'; tag.textContent = member.nameTag; name.prepend(tag, ' '); }
