@@ -44,15 +44,37 @@ document.querySelectorAll('[data-roster]').forEach(container => {
   container.replaceChildren(); container.className = 'roster-grid';
   for (const member of members) {
     const card = document.createElement('article'); card.className = 'profile';
+    const creator = container.dataset.roster === 'creators';
+    const tiktok = (member.socials || []).find(social => {
+      const url = safeUrl(social.url); if (!url) return false;
+      const parsed = new URL(url);
+      return ['www.tiktok.com', 'tiktok.com'].includes(parsed.hostname) && /^\/@[^/]+\/?$/.test(parsed.pathname);
+    });
+    if (creator) {
+      card.classList.add('profile-creator');
+      const heading = document.createElement('div'); heading.className = 'profile-card-heading';
+      const brand = document.createElement('span'); brand.textContent = 'SOVEN';
+      const category = document.createElement('span'); category.textContent = 'Creator';
+      heading.append(brand, category); card.append(heading);
+    }
     const fallback = () => { const el = document.createElement('div'); el.className = 'profile-placeholder'; el.setAttribute('aria-hidden', 'true'); el.textContent = member.name.slice(0, 2).toUpperCase(); return el; };
     if (member.image) { const img = document.createElement('img'); img.src = member.image; img.alt = member.name; img.loading = 'lazy'; img.width = 400; img.height = 400; img.addEventListener('error', () => img.replaceWith(fallback()), { once: true }); card.append(img); } else card.append(fallback());
     const body = document.createElement('div'); body.className = 'profile-body';
     const name = document.createElement('h3'); name.textContent = member.name;
     if (member.nameTag) { const tag = document.createElement('span'); tag.className = 'profile-name-tag'; tag.textContent = member.nameTag; name.prepend(tag, ' '); }
     const role = document.createElement('p'); role.textContent = member.role; body.append(name, role);
+    if (creator && tiktok) {
+      const handle = document.createElement('p'); handle.className = 'profile-handle';
+      handle.textContent = new URL(tiktok.url).pathname.replace(/^\//, '').replace(/\/$/, ''); body.append(handle);
+    }
     if (member.epicName) { const epic = document.createElement('p'); epic.textContent = 'Epic: ' + member.epicName; body.append(epic); }
     const socials = document.createElement('div'); socials.className = 'profile-socials';
-    for (const social of member.socials || []) if (safeUrl(social.url)) { const link = externalLink(social.label, safeUrl(social.url)); link.append(arrowIcon()); socials.append(link); }
+    for (const social of member.socials || []) if (safeUrl(social.url)) {
+      const primaryTikTok = creator && social === tiktok;
+      const link = externalLink(primaryTikTok ? 'View on TikTok' : social.label, safeUrl(social.url), primaryTikTok ? 'button profile-tiktok' : '');
+      if (primaryTikTok) link.setAttribute('aria-label', `View ${member.name} on TikTok (opens in a new tab)`);
+      link.append(arrowIcon()); socials.append(link);
+    }
     body.append(socials); card.append(body); container.append(card);
   }
 });
